@@ -1,0 +1,25 @@
+// mixins alert
+
+@mixin alert($padding_alert, $background_alert, $background_hover_alert, $color_alert:$white){	
+	padding: $padding_alert;
+	background-color: $background_alert;
+	color: $color_alert;
+	margin-bottom: 15px;
+	&:hover {
+		background-color: $background_hover_alert;
+	}  
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

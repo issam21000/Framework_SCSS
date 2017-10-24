@@ -1,0 +1,34 @@
+@import "mixins/alert";
+
+
+
+.information_alert {
+	@include alert($padding_alert, $background_alert,$background_hover_alert);
+}
+
+.success_alert {
+	@include alert($padding_alert, $background_alert_succes,$background_hover_alert_succes);
+}
+
+.danger_alert {
+	@include alert($padding_alert, $background_alert_danger,$background_hover_alert_danger);
+}
+
+.warning_alert {
+	@include alert($padding_alert, $background_alert_warning,$background_hover_alert_warning);
+}
+
+// close button
+.closebtn {
+	margin-left: 15px;
+	color: $white;
+	font-weight: bold;
+	float: right;
+	font-size: 22px;
+	line-height: 20px;
+	cursor: pointer;
+	transition: 0.3s;
+	&:hover {
+		color: $black;
+	}
+}
