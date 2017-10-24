@@ -1,0 +1,35 @@
+// mixins table
+
+@mixin table($border_bottom:$border_table) {
+	width: 80%;
+	td, th, tr {
+		border-bottom: $border_bottom;
+		text-align: center;
+		padding: 10px;
+	}	
+	thead th {
+		font-weight: bold;
+		font-size: 1.5em;
+	}
+}
+
+@mixin alternate_lignes_table($background:$color_blue_chalk_approx) {
+	background-color: $background;
+}
+
+@mixin bordered_table($border:$border_table) {
+	tr, td, th {
+		border: $border;
+	}
+}
+
+@mixin active_rows_table($background:$color_blue_chalk_approx){
+		background-color: $background;
+	}
+
+
+	
+	
+
+
+

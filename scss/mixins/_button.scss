@@ -1,0 +1,23 @@
+// mixins button
+
+@mixin button($font_size, $padding, $background, $color, $border, 
+	$border_radius, $background_hover, $box_shadow:$box_shadow_active){	
+	display: inline-block;
+ 	font-size: $font_size;
+ 	padding: $padding;
+ 	margin: 10px;
+ 	text-align: center;
+ 	background-color: $background;
+ 	color: $color;
+ 	border: $border;
+ 	border-radius: $border_radius;
+ 	cursor: pointer;   
+ 	text-decoration: none;
+ 	&:hover{
+    	background-color:$background_hover; 
+  	}
+  	&:active{
+    	box-shadow: $box_shadow;
+  	}  
+  
+}

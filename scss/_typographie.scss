@@ -1,0 +1,229 @@
+
+//placeholder
+//original selectors
+//h1, h2, h3, h4, h5, h6
+%title {
+	font-family: $fontArial, $fontVerdana, $fontHelvetica, $fontSans-serif;
+	font-weight: bold;
+	color: $black;
+}
+
+//original selectors
+// subtitle
+%subtitle{
+	color: $gray;
+}
+
+.header {
+	h1 {
+		text-align: center;
+		margin-top: 20px;
+	}
+	h3 {
+		margin-left: 30px;
+	}
+}
+
+h1 {
+	@extend %title;
+	font-size: 40px;
+	small {
+		font-size: 33px;
+		color: $gray;
+	}
+}
+
+h2 {
+	@extend %title;
+	font-size: 35px;
+	small {
+		font-size: 28px;
+		color: $gray;
+	}
+}
+
+h3 {
+	@extend %title;
+	font-size: 30px;
+	small {
+		font-size: 23px;
+		color: $gray;
+	}
+}
+
+h4 {
+	@extend %title;
+	font-size: 25px;
+	small {
+		font-size: 18px;
+		color: $gray;
+	}
+}
+
+h5 {
+	@extend %title;
+	font-size: 20px;
+	small {
+		font-size: 13px;
+		color: $gray;
+	}
+}
+
+h6 {
+	@extend %title;
+	font-size: 15px;
+	small {
+		font-size: 10px;
+		color: $gray;
+	}
+}
+
+.subtitle1 {
+	@extend %subtitle;
+	font-size: 33px; 
+}
+.subtitle2 {
+	@extend %subtitle;
+	font-size: 28px; 
+}
+.subtitle3 {
+	@extend %subtitle;
+	font-size: 23px; 
+}
+.subtitle4 {
+	@extend %subtitle;
+	font-size: 18px; 
+}
+.subtitle5 {
+	@extend %subtitle;
+	font-size: 13px; 
+}
+.subtitle6 {
+	@extend %subtitle;
+	font-size: 10px; 
+}
+
+body {
+	font-family: $fontArial, Verdana, Helvetica, $fontSans-serif;
+	margin-left: 2%;
+	p {
+		margin-right: 2%;
+		font-family: inherit;
+		font-size: inherit;
+		margin-bottom: 10px;
+	}
+}
+
+mark {
+	background-color: $yellow;
+	color: $black;
+}
+del {
+	color: $red;
+	text-decoration: line-through;
+}
+ins {
+	color: $green;
+	text-decoration: underline;
+}
+u {
+	color: $black;
+	text-decoration: underline;
+}
+strong {
+	font-weight: bold;
+	color: $black;
+}
+em {
+	font-style: italic;
+	color: $black;
+}
+abbr {
+	border-bottom: .1em dotted;
+	text-decoration: none;
+}
+.text_align_left {
+	text-align: left;
+}
+.text_align_right {
+	text-align: right;
+}
+.text_align_center {
+	text-align: center;
+}
+.text_align_justify {
+	text-align: justify;
+}
+.text_uppercase {
+	text-transform: uppercase;
+}
+.text_lowercase {
+	text-transform: lowercase;
+}
+
+ul {
+	list-style: disc;
+	margin-left: 4%;
+	margin-bottom: 2%;
+	li {
+		display: list-item;
+	}
+	&.square_style {
+		list-style: square;
+	}
+	&.decimal_style {
+		list-style: decimal;
+	}
+	&.upper_roman_style {
+		list-style: upper-roman;
+	}
+	&.without_style {
+		list-style: none;
+	}
+}
+
+blockquote {
+	quotes: "\201C" "\201D";
+	font-style: normal;
+	margin-left: 30px;
+	border: 1px $black solid;
+	padding: 20px 10px 0;
+	&:before {
+		content: open-quote;
+		font-size: 5em;
+		vertical-align: -.4em;
+		margin-right: 5px;
+		line-height: 2px;
+	}
+	&:after {
+		content: close-quote;
+		font-size: 5em;
+		vertical-align: -.6em;
+		margin-left: 5px;
+		line-height: 1px;
+	}
+}
+
+code {
+	font-family: $fontMonospace;
+	background-color: $black;
+	color: $white;
+	font-size: 16px;
+	margin: 10px;
+}
+
+pre {
+	margin: 10px;
+	font-family: $fontTimes, $fontSerif;
+}
+
+kbd {
+	font: bold 90% $fontArial, Helvetica, $fontSans-serif;
+	border-width: 2px 4px 5px 3px;
+	border-style: solid;
+	border-color: $color_celeste_approx $color_silver_chalice_approx $color_suva_gray_approx $color_pink_swan_approx;
+	padding: 2px 3px;
+	white-space: nowrap;
+	color: $color_fuscous_gray_approx;
+	background: $color_gallery_approx;
+}

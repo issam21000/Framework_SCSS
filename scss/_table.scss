@@ -1,0 +1,17 @@
+
+@import "mixins/table";
+
+
+
+table {
+  @include table($border_table);
+  &.alternate_lignes_table tbody tr:nth-child(2n + 1){
+  	@include alternate_lignes_table($color_blue_chalk_approx);
+  }
+  &.bordered_table{
+  	@include bordered_table($border_table);
+  }
+  &.active_rows_table tbody tr:hover{
+  	@include active_rows_table($color_blue_chalk_approx);
+  }
+}

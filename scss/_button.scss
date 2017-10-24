@@ -1,0 +1,82 @@
+@import "mixins/button";
+
+
+.btn {
+	@include button($font_size_button, $padding_button, $background_button, 
+	$color_button, $border_button, $border_radius_button, $background_hover_button);
+}
+
+.btn-small{
+	@include button($font_size_button_small, $padding_button_small, $background_button, 
+	$color_button, $border_button, $border_radius_button_small, $background_hover_button);
+}
+
+.btn-large {
+	@include button($font_size_button_large, $padding_button_large, $background_button, 
+	$color_button, $border_button, $border_radius_button_large, $background_hover_button);
+}
+
+.btn-red {
+	@include button($font_size_button, $padding_button, $red, 
+	$color_button, $border_button_red, $border_radius_button, $background_hover_button_red);
+}
+
+.btn-green {
+	@include button($font_size_button, $padding_button, $green, 
+	$color_button, $border_button_green, $border_radius_button, $background_hover_button_green);
+}
+
+.btn-orange {
+	@include button($font_size_button, $padding_button, $color_pizazz_approx, 
+	$color_button, $border_button_orange, $border_radius_button, $background_hover_button_orange);
+}
+
+
+.btn-flat {
+	@include button($font_size_button, $padding_button, $color_eastern_blue_approx, 
+	$color_button, $border_button_flat, $border_radius_button_flat, $background_hover_button);
+}
+
+
+.btn-extra-large {
+	@include button($font_size_button, $padding_button, $background_button, 
+	$color_button, $border_button, $border_radius_button, $background_hover_button);
+	width: 90%;
+}
+
+
+.btn-fancy {
+	@include button($font_size_button, $padding_button, $background_button, 
+	$color_button, $border_button, $border_radius_button, $background_hover_button);
+	transition-duration: $transition_duration_fancy;
+	&:hover {
+		font-size: $font_size_fancy;  
+		transform: $transform_hover_fancy;     
+		background-color: $color_lucky_point_approx;
+		border: $border_fancy;
+	}
+	&:active {
+		box-shadow: $box_shadow_fancy;
+		transform: $transform_active_fancy;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
