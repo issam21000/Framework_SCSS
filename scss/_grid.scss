@@ -1,0 +1,28 @@
+@import "mixins/grid";
+
+
+.col-12{
+	@include grid(12);
+}
+
+.col-8{
+	@include grid(8);
+}
+
+.col-6{
+	@include grid(6);
+}
+
+.col-4{
+	@include grid(4);
+}
+
+.col-2{
+	@include grid(2);
+}
+
+
+
+
+
+

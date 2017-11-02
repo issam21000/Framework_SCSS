@@ -1,0 +1,39 @@
+
+
+
+
+// mixins grid
+@mixin grid($col:$num_col, $gutter: $gutter_grid, $background_grid:$Aquamarine) {
+    margin-top: $gutter;
+    margin-bottom: $gutter;
+    display: flex;
+ 	flex-direction: row; 	
+  	word-wrap: break-word;
+  	text-align: justify;
+
+	& div {
+		width: calc(100%/ #{$col} - #{$gutter});
+		height: auto;
+		margin-left: $gutter;
+		padding:1em;			
+	    box-sizing: border-box;
+	    background-color: $background_grid;   
+	}
+
+	@for $i from 1 through $col {
+	   .offset-#{$i} {
+	   	 margin-left: calc(100%/ #{$col} * #{$i} + #{$gutter});
+	   }
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
