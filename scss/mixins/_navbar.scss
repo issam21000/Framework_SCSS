@@ -1,0 +1,65 @@
+
+// mixins grid
+@mixin navbar($margin,$background_nav:$backg_nav, $color_a:$white,$padding:$padding_li,$background_act:$background_active,$background_dis:$background_disabled,$color_dis:$color_disabled){
+	display:flex;
+	flex-direction:row;
+	width: 100%;
+	background-color:$background_nav; 
+	text-align: center;
+	list-style: none;
+	box-sizing: border-box;
+	margin:$margin;
+	& li{
+		padding:$padding;
+		&.disabled{
+			background-color: $background_dis;
+			& a{
+				cursor:not-allowed;
+				color:$color_dis;
+			}
+		}
+		&.active{
+			background-color: $background_act;
+		}
+		& a{
+				display:block;		
+				text-decoration: none;
+				color:$color_a;				
+		}
+	}	
+}
+
+@mixin hoverNavbar($background_liHov,$background_liDsiHov){
+	@extend .navbar;
+	& li:hover{
+		background-color: $background_liHov;
+	} 
+	& li.disabled:hover{
+		background-color:$background_liDsiHov; 
+	} 
+}
+
+@mixin navbarSearch($transition,$width,$border:$border_input,$border_color:$border_color_hover,
+					$background_color:$background_color_input,$border_radius:$border_radius_input,
+					$padding:$padding_input){
+	@extend .navbar;
+	& .searchBar{		
+    	margin-top: 1.3%;
+	}
+	& input{
+		background:url(../img/search-icon.png) no-repeat 9px center;
+		background-color:$background_color;
+		border: $border;
+		padding: $padding_input;
+		width: 100%;
+		border-radius: $border_radius;
+	    transition: $transition;
+	    margin-left: 50px;
+	    box-sizing: border-box;	    
+		&:hover{
+			width: $width;
+			border-color: $border_color;
+		}
+	}	
+}
+

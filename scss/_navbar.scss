@@ -1,0 +1,13 @@
+@import "mixins/navbar";
+
+.navbar{
+	@include navbar($margin_nav);
+}
+
+.navbarHover{
+	@include hoverNavbar($background_liHover,$background_liDsiHover);
+}
+
+.navbarSearch{
+	@include navbarSearch($transition_input,$width_hover_input);
+}
