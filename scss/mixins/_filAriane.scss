@@ -1,0 +1,72 @@
+
+// mixins filAriane
+@mixin filAriane($font,$font_scr,$padding,$padding_scr,$width:$width_filAriane,$color_a:$white,
+				$background_a:$background_filArinae_a,$background_c:$background_color_h,
+				$border_aft_bef:$border_after_before,$border_after:$border_after_left,
+				$border_before:$border_before_left,$width_scr:$width_screen_filArinae){
+	list-style: none;
+	overflow: hidden;
+	font-size: $font;
+	display:flex;
+	flex-direction:row;
+	width: $width;	
+	& li a{	
+		color: $color_a;
+		text-decoration: none;
+		padding: $padding;
+		background: $background_filArinae_a;
+		position: relative;
+		display: block;
+		&:hover {
+			background: $background_c;
+			&:after {
+				border-left-color: $background_c !important;
+			}
+		}
+		&.active{
+			background-color: $background_c;
+			&:after {
+				border-left-color: $background_c !important;
+			}
+		}		
+		&::after {
+			content: " ";
+			display: block;
+			width: 0;
+			height: 0;
+			border-top: $border_after_before;
+			border-bottom: $border_after_before;
+			border-left: $border_after;
+			position: absolute;
+			top: 50%;
+			margin-top: -50px;
+			left: 100%;
+			z-index: 2;
+		}
+		&::before {
+			content: " ";
+			display: block;
+			width: 0;
+			height: 0;
+			border-top: $border_after_before;
+			border-bottom: $border_after_before;
+			border-left: $border_before;
+			position: absolute;
+			top: 50%;
+			margin-top: -50px;
+			margin-left: 1px;
+			left: 100%;
+			z-index: 1;
+		}
+	}
+
+	@media screen and (max-width: $screen_max_width){			
+		font-size: $font_scr;
+		width: $width_scr;
+		& li a{
+			padding: $padding_scr;
+		}
+	}
+
+}
+

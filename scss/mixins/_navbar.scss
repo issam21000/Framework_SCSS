@@ -1,6 +1,7 @@
 
 // mixins grid
-@mixin navbar($margin,$background_nav:$backg_nav, $color_a:$white,$padding:$padding_li,$background_act:$background_active,$background_dis:$background_disabled,$color_dis:$color_disabled){
+@mixin navbar($margin,$background_nav:$backg_nav, $color_a:$white,$padding:$padding_li,
+	$background_act:$background_active,$background_dis:$background_disabled,$color_dis:$color_disabled){
 	display:flex;
 	flex-direction:row;
 	width: 100%;
@@ -41,10 +42,12 @@
 
 @mixin navbarSearch($transition,$width,$border:$border_input,$border_color:$border_color_hover,
 					$background_color:$background_color_input,$border_radius:$border_radius_input,
-					$padding:$padding_input){
+					$padding:$padding_input,$screen:$screen_max_width,$width_screen:$width_screen_hover,
+					$padding_screen:$padding_screen_input){
 	@extend .navbar;
 	& .searchBar{		
-    	margin-top: 1.3%;
+    	margin-top: 1%;
+    	margin-bottom: 1%;
 	}
 	& input{
 		background:url(../img/search-icon.png) no-repeat 9px center;
@@ -59,7 +62,17 @@
 		&:hover{
 			width: $width;
 			border-color: $border_color;
+			 
 		}
-	}	
+	}
+	@media screen and (max-width: $screen) {
+	   & input{
+		   	margin-left:0;
+		   	padding:$padding_screen;
+		   	&:hover{
+		   		width: $width_screen;
+		   	}
+	   }
+  	}	
 }
 
