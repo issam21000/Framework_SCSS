@@ -1,0 +1,45 @@
+// mixins paging
+@mixin paging($margin,$color_a,$padding,$padding_screen,$background_actv,$border:$border_paging,
+			$border_h:$border_hover){
+    margin:0;
+    margin-right:$margin;
+    display:flex;
+    flex-direction:row;
+    list-style:none;
+    & li{	
+		border:$border_paging;
+    	margin-right:$margin;
+		text-decoration: none;
+		&:hover {
+			border:$border_h;
+		}		
+		& a{
+			display:block;		
+			text-decoration: none;
+			color:$color_a;	
+			padding:$padding;
+		}		
+		&.active a{
+			background-color:$background_actv;
+		    color:$white;
+		    font-weight:bold;
+		    padding:$padding;
+		}
+		&.disabled a{
+			background-color:$background_disabled;			
+			cursor:not-allowed;
+			color:$color_disabled;
+			padding:$padding;			
+		}
+		&.previous,&.next{
+			font-weight: bold;
+		}		
+	}
+	@media screen and(max-width: $screen_max_width){
+		& li {
+			& a, &.active a, &.disabled a{
+				padding:$padding_screen;	
+			}
+		}
+	}
+}

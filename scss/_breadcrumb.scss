@@ -1,4 +1,4 @@
-@import "mixins/filAriane";
+@import "mixins/breadcrumb";
 
 .breadcrumb{
 	@include filAriane($font_size_filAriane,$font_screen_filArinae,$padding_filAriane,$padding_screen_filArinae);

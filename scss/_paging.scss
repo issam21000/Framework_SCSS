@@ -1,0 +1,5 @@
+@import "mixins/paging";
+
+.pagination{
+	@include paging($margin_paging,$color_a_paging,$padding_paging,$padding_screen_paging,$background_actv_paging);
+}
