@@ -1,0 +1,13 @@
+@import "mixins/form";
+
+.ContactForm{
+	@include contactForm($width_form,$padding_form,$font_form,$margin_li_form,$width_input_text_select);
+}
+
+.registerForm{
+	@include registerForm($width_registerForm,$margin_registerForm);
+}
+
+.loginForm{
+	@include loginForm($width_loginForm,$margin_loginForm);
+}

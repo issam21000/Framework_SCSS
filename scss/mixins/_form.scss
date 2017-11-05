@@ -1,0 +1,85 @@
+// mixins form
+@mixin contactForm($width,$padding,$font,$margin_li,$width_inpTexSelc,$border_inpTexSelc:$border_input_text_select,
+			$margin_label:$margin_label_form,$padding_inpTexSelc:$padding_input_text_select,
+			$transition_inpTexSelc:$transition_input_text_select,$boxShad_inpTexSelc:$boxShad_input_text_select,
+			$height:$height_text,$margin_screen:$margin_screen_form,$font_screen:$font_screen_Form){
+    margin-left:25%;
+    max-width: $width;
+    padding: $padding;
+    font: $font;
+    display:flex;
+    flex-direction: column;
+
+
+	& li {
+	    padding: 0;
+	    list-style: none;
+	    margin-bottom: $margin_li;
+
+		& label{
+		    margin:$margin_label_form;
+		    padding:0px;
+		    display:block;
+		    font-weight: bold;
+		} 
+
+		& input,
+		& textarea, 
+		& select{
+		    width: $width_inpTexSelc;
+		    box-sizing: border-box;
+		    border:$border_inpTexSelc;
+		    padding: $padding_inpTexSelc;
+		    margin:0px;
+		    transition: $transition_input_text_select;    
+		    outline: none;  
+		    &:focus{
+		    	box-shadow: $boxShad_inpTexSelc;
+		    	border: $border_inpTexSelc;
+		    }
+		}
+	}
+	& .field-textarea{
+	    height: $height;
+	}
+	& .btn-flat{
+			margin-left:0;
+	}
+	& .required{
+	    color:red;
+	}
+	@media screen and (max-width: $screen_max_width_form) {
+		margin-left:$margin_screen;
+		& li input, & li label, & li textarea, & li select{
+			font-size: $font_screen_Form;
+		}
+		& .btn-flat{
+			padding:10px;
+			font-size: $font_screen_Form;
+		}	
+	}
+}
+
+@mixin registerForm($width,$margin){
+	@extend .ContactForm;
+	max-width:$width;
+
+	@media screen and (max-width: $screen_max_width_form) {
+		margin-left:$margin;	
+		& li input,& li label{
+			font-size: $font_screen_Form;
+		}
+	}
+}
+
+@mixin loginForm($width,$margin){
+	@extend .ContactForm;
+	max-width:$width;
+
+	@media screen and (max-width: $screen_max_width_form) {
+		margin-left:$margin;
+		& li input,& li label{
+			font-size: $font_screen_Form;
+		}	
+	}
+}

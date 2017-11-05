@@ -723,4 +723,62 @@ table {
       padding: 4px 6px;
       font-size: 0.7em; } }
 
+.ContactForm, .registerForm, .loginForm {
+  margin-left: 25%;
+  max-width: 50%;
+  padding: 20px 12px 10px 20px;
+  font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  display: flex;
+  flex-direction: column; }
+  .ContactForm li, .registerForm li, .loginForm li {
+    padding: 0;
+    list-style: none;
+    margin-bottom: 15px; }
+    .ContactForm li label, .registerForm li label, .loginForm li label {
+      margin: 0 0 3px 0;
+      padding: 0px;
+      display: block;
+      font-weight: bold; }
+    .ContactForm li input, .registerForm li input, .loginForm li input, .ContactForm li textarea, .registerForm li textarea, .loginForm li textarea, .ContactForm li select, .registerForm li select, .loginForm li select {
+      width: 100%;
+      box-sizing: border-box;
+      border: 1px solid #BEBEBE;
+      padding: 7px;
+      margin: 0px;
+      transition: all 0.3s ease-in-out;
+      outline: none; }
+      .ContactForm li input:focus, .registerForm li input:focus, .loginForm li input:focus, .ContactForm li textarea:focus, .registerForm li textarea:focus, .loginForm li textarea:focus, .ContactForm li select:focus, .registerForm li select:focus, .loginForm li select:focus {
+        box-shadow: 0 0 8px #88D5E9;
+        border: 1px solid #BEBEBE; }
+  .ContactForm .field-textarea, .registerForm .field-textarea, .loginForm .field-textarea {
+    height: 100px; }
+  .ContactForm .btn-flat, .registerForm .btn-flat, .loginForm .btn-flat {
+    margin-left: 0; }
+  .ContactForm .required, .registerForm .required, .loginForm .required {
+    color: red; }
+  @media screen and (max-width: 1024px) {
+    .ContactForm, .registerForm, .loginForm {
+      margin-left: 20px; }
+      .ContactForm li input, .registerForm li input, .loginForm li input, .ContactForm li label, .registerForm li label, .loginForm li label, .ContactForm li textarea, .registerForm li textarea, .loginForm li textarea, .ContactForm li select, .registerForm li select, .loginForm li select {
+        font-size: 0.9em; }
+      .ContactForm .btn-flat, .registerForm .btn-flat, .loginForm .btn-flat {
+        padding: 10px;
+        font-size: 0.9em; } }
+
+.registerForm {
+  max-width: 40%; }
+  @media screen and (max-width: 1024px) {
+    .registerForm {
+      margin-left: 50px; }
+      .registerForm li input, .registerForm li label {
+        font-size: 0.9em; } }
+
+.loginForm {
+  max-width: 30%; }
+  @media screen and (max-width: 1024px) {
+    .loginForm {
+      margin-left: 70px; }
+      .loginForm li input, .loginForm li label {
+        font-size: 0.9em; } }
+
 /*# sourceMappingURL=main.css.map */
