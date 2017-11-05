@@ -1,5 +1,5 @@
 
-##Framework_SCSS
+## Framework_SCSS
 
 Framework scss.
 
@@ -7,8 +7,8 @@ Framework scss.
 
 - [Quick start](#quick-start)
 - [What's included](#whats-included)
-- [Demonstration page](#Demonstration page)
-- [Creator](#Creator)
+- [Demonstration page](#demonstration page)
+- [Creator](#creator)
 
 ## Quick start
 
@@ -35,7 +35,7 @@ Within the download you'll find the following directories and files. You'll see 
 + variables.scss
 
 
-##Demonstration page
+## Demonstration page
 
 You will find in this repository a page named index.html, it contain an exemple for each HTML element to see the rendering of the css file.
 
