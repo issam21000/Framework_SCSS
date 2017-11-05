@@ -1,3 +1,20 @@
+// @font-face 
+@font-face {
+	 font-family: $fontArial;
+	 src: url('fonts/Arial.ttf');
+}
+@font-face {
+	 font-family: $fontVerdana;
+	 src: url('fonts/Verdana.ttf');
+}
+@font-face {
+	 font-family: $fontHelvetica;
+	 src: url('fonts/Helvetica.ttf');
+}
+@font-face {
+	 font-family: $fontTimes;
+	 src: url('fonts/times new roman.ttf');
+}
 
 //placeholder
 //original selectors
@@ -104,7 +121,7 @@ h6 {
 }
 
 body {
-	font-family: $fontArial, Verdana, Helvetica, $fontSans-serif;
+	font-family: $fontArial;
 	margin-left: 2%;
 	p {
 		margin-right: 2%;
@@ -218,7 +235,7 @@ pre {
 }
 
 kbd {
-	font: bold 90% $fontArial, Helvetica, $fontSans-serif;
+	font: bold 90% $fontArial, $fontHelvetica, $fontSans-serif;
 	border-width: 2px 4px 5px 3px;
 	border-style: solid;
 	border-color: $color_celeste_approx $color_silver_chalice_approx $color_suva_gray_approx $color_pink_swan_approx;
