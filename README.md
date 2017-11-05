@@ -1,7 +1,7 @@
 
-#Framework_SCSS
+##Framework_SCSS
 
-Demonstration page :https://github.com/issam21000/Framework_SCSS/
+Framework scss.
 
 ## Table of contents
 
@@ -19,39 +19,20 @@ Demonstration page :https://github.com/issam21000/Framework_SCSS/
 
 Within the download you'll find the following directories and files. You'll see something like this:
 
-Framework_SCSS/
-├── css
-│   ├── fonts   
-│   ├── main.css
-│   
-│   
-├── img
-│   
-│   
-├── index.html
-├── README.md
-└── scss
-    ├── alert.scss
-    ├── breadcrumb.scss
-    ├── button.scss
-    ├── form.scss
-    ├── grid.scss
-    ├── main.scss
-    ├── mixins
-    │   ├── alert.scss
-    │   ├── breadcrumb.scss
-    │   ├── button.scss
-    │   ├── form.scss
-    │   ├── grid.scss
-    │   ├── navbar.scss
-    │   ├── paging.scss
-    │   └── table.scss
-    ├── navbar.scss
-    ├── paging.scss
-    ├── reset.scss
-    ├── table.scss
-    ├── typographie.scss
-    └── variables.scss
++ alert.scss
++ breadcrumb.scss
++ button.scss
++ form.scss
++ grid.scss
++ navbar.scss
++ paging.scss
++ table.scss
++ navbar.scss
++ paging.scss
++ reset.scss
++ table.scss
++ typographie.scss
++ variables.scss
 
 
 ##Demonstration page
