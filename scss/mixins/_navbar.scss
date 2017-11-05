@@ -1,7 +1,8 @@
 
 // mixins grid
 @mixin navbar($margin,$background_nav:$backg_nav, $color_a:$white,$padding:$padding_li,
-	$background_act:$background_active,$background_dis:$background_disabled,$color_dis:$color_disabled){
+	$background_act:$background_active,$background_dis:$background_disabled,$color_dis:$color_disabled,
+	$font_screen_nav:$font_screen_navPag,$padding_screen_nav:$padding_screen_navbar){
 	display:flex;
 	flex-direction:row;
 	width: 100%;
@@ -25,8 +26,16 @@
 		& a{
 				display:block;		
 				text-decoration: none;
-				color:$color_a;				
+				color:$color_a;	
 		}
+	}
+	@media screen and (max-width: $screen_max_width) {
+		& li {
+			padding:$padding_screen_nav;
+			& a{
+				font-size: $font_screen_nav;
+			}		
+		}	
 	}	
 }
 
@@ -43,7 +52,7 @@
 @mixin navbarSearch($transition,$width,$border:$border_input,$border_color:$border_color_hover,
 					$background_color:$background_color_input,$border_radius:$border_radius_input,
 					$padding:$padding_input,$screen:$screen_max_width,$width_screen:$width_screen_hover,
-					$padding_screen:$padding_screen_input){
+					$padding_screen:$padding_screen_input,$font_screen_inp:$font_screen_input){
 	@extend .navbar;
 	& .searchBar{		
     	margin-top: 1%;
@@ -66,13 +75,20 @@
 		}
 	}
 	@media screen and (max-width: $screen) {
-	   & input{
-		   	margin-left:0;
+		& .searchBar{		
+	    	margin-top: 0;
+	    	margin-bottom: 0;
+		}
+	   	& input{
+			background:url(../img/search-icon-screen.png) no-repeat 9px center;
+			background-color:$background_color;
+		   	margin-left:3px;
 		   	padding:$padding_screen;
+		   	font-size: $font_screen_inp;
 		   	&:hover{
 		   		width: $width_screen;
 		   	}
-	   }
+	   	}
   	}	
 }
 

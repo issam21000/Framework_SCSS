@@ -41,7 +41,7 @@ h1, h2, h3, h4, h5, h6 {
 .header h1 {
   text-align: center;
   margin-top: 20px; }
-.header h3 {
+.header h4 {
   margin-left: 30px; }
 
 h1 {
@@ -592,6 +592,11 @@ table {
       display: block;
       text-decoration: none;
       color: #ffffff; }
+  @media screen and (max-width: 710px) {
+    .navbar li, .navbarHover li, .navbarSearch li {
+      padding: 1%; }
+      .navbar li a, .navbarHover li a, .navbarSearch li a {
+        font-size: 0.7em; } }
 
 .navbarHover li:hover {
   background-color: #111; }
@@ -615,9 +620,15 @@ table {
     width: 350px;
     border-color: #66CC75; }
 @media screen and (max-width: 710px) {
+  .navbarSearch .searchBar {
+    margin-top: 0;
+    margin-bottom: 0; }
   .navbarSearch input {
-    margin-left: 0;
-    padding: 4px 10px 4px 32px; }
+    background: url(../img/search-icon-screen.png) no-repeat 9px center;
+    background-color: #fff;
+    margin-left: 3px;
+    padding: 0px 10px 0px 32px;
+    font-size: 0.6em; }
     .navbarSearch input:hover {
       width: 100%; } }
 
@@ -709,6 +720,7 @@ table {
       font-weight: bold; }
   @media screen and (max-width: 710px) {
     .pagination li a, .pagination li.active a, .pagination li.disabled a {
-      padding: 4px 6px; } }
+      padding: 4px 6px;
+      font-size: 0.7em; } }
 
 /*# sourceMappingURL=main.css.map */

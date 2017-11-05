@@ -39,6 +39,7 @@
 		& li {
 			& a, &.active a, &.disabled a{
 				padding:$padding_screen;	
+				font-size: $font_screen_navPag;
 			}
 		}
 	}
